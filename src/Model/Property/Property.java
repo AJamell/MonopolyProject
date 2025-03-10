@@ -80,7 +80,7 @@ public class Property extends BoardSpace {
     private void collectRent(Player player) {
         int rentAmount = calculateRent();
         player.decreaseMoney(rentAmount);
-        owner.increaseMoney(rentAmount);
+        owner.addMoney(rentAmount);
     }
 
     /**
@@ -159,7 +159,7 @@ public class Property extends BoardSpace {
     public boolean mortgage() {
         if (!isMortgaged && numHouses == 0 && !hasHotel) {
             isMortgaged = true;
-            owner.increaseMoney(mortgageValue);
+            owner.addMoney(mortgageValue);
             return true;
         }
         return false;

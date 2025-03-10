@@ -88,7 +88,7 @@ public class Player {
      * Add money to player's balance
      * @param amount Amount to add
      */
-    public void increaseMoney(int amount) {
+    public void addMoney(int amount) {
         money += amount;
     }
 
@@ -162,5 +162,9 @@ public class Player {
      */
     public Board getBoard() {
         return board;
+    }
+
+    public int getNumRailroads() {
+
     }
 }

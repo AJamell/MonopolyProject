@@ -10,7 +10,7 @@ import Model.Player;
  * Manages property grouping and building rules.
  */
 public class ColorGroup {
-    private final String color;
+    private final PropertyColor color;
     private final List<Property> properties;
     private final int propertiesInGroup;  // Total properties needed for monopoly
     
@@ -19,7 +19,7 @@ public class ColorGroup {
      * @param color Name of the color (e.g., "BLUE", "RED")
      * @param propertiesInGroup Number of properties in this group (2 or 3)
      */
-    public ColorGroup(String color, int propertiesInGroup) {
+    public ColorGroup(PropertyColor color, int propertiesInGroup) {
         this.color = color;
         this.propertiesInGroup = propertiesInGroup;
         this.properties = new ArrayList<>();
@@ -144,7 +144,7 @@ public class ColorGroup {
     }
 
     // Getters
-    public String getColor() {
+    public PropertyColor getColor() {
         return color;
     }
 

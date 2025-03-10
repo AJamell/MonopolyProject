@@ -1,6 +1,6 @@
 package Model;
 
-public class Element {
+public abstract class Element {
     private String name;
     private int position;
 
@@ -16,4 +16,5 @@ public class Element {
     public int getPosition() {
         return position;
     }
+    public abstract void onLanding(Player player);
 }
